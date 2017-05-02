@@ -1,0 +1,34 @@
+[
+  {
+    "Scheme_Name":"HDFC Top 200 Funds",
+    "Folio":"5866992/62",
+    "Scheme_Inv_DATE":"05-10-2013",
+    "Holding_Start_Date":"05-10-2013",
+    "Purchased_Units":978,
+    "Sold_Units":660,
+    "Balanced_Units":318,
+    "Total_Invested_Cost":21395.84,
+    "Total_Redemtion":0,
+    "NAV":26,
+    "Current_Value":8268,
+    "Total_PL":-13127.84,
+    "PL":"-61.36%",
+    "XIRR":null
+  },
+  {
+    "Scheme_Name":"Uti Bond Fund",
+    "Folio":"534299612",
+    "Scheme_Inv_DATE":"15/12/2013",
+    "Holding_Start_Date":"15/12/2013",
+    "Purchased_Units":615,
+    "Sold_Units":445,
+    "Balanced_Units":270,
+    "Total_Invested_Cost":0,
+    "Total_Redemtion":0,
+    "NAV":28,
+    "Current_Value":7560,
+    "Total_PL":7560,
+    "PL":"-61.36%",
+    "XIRR":null
+  }
+]

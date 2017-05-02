@@ -1,0 +1,193 @@
+<div class="user-login-5">
+    <div class="row bs-reset">
+        <div class="col-md-6 login-container bs-reset login-left">
+            <img class="login-logo login-6" src="assets/pages/img/login/login-invert.png"/>
+            <div class="login-content">
+                <h1>Investor Login</h1>
+                <p></p>
+                <form action="javascript:;" class="login-form" method="post" ng-submit="SignInClicked()">
+                    <div class="alert alert-danger display-hide">
+                        <button class="close" data-close="alert"></button>
+                        <span>Enter any username and password. </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input class="form-control form-control-solid placeholder-no-fix form-group"
+                                   ng-enter="SignInClicked();" type="text" autocomplete="off" placeholder="Username"
+                                   ng-model="username" name="username" required/></div>
+                        <div class="col-xs-6">
+                            <input class="form-control form-control-solid placeholder-no-fix form-group"
+                                   ng-enter="SignInClicked();" type="password" autocomplete="off" placeholder="Password"
+                                   ng-model="password" name="password" required/></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="rem-password">
+                                <p>Remember Me
+                                    <input type="checkbox" class="rem-checkbox"/>
+                                </p>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="javascript:;" id="forget-password" ng-click="enableForgotPassword()"
+                                   class="forget-password">Forgot Password?</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 text-right">
+                            <button class="btn blue" type="submit" ng-enter="SignInClicked();"
+                                    ng-click="SignInClicked()">Sign In
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- BEGIN FORGOT PASSWORD FORM -->
+                <form class="forget-form" style="display: none" action="javascript:;" method="post">
+                    <h3 class="font-green">Forgot Password ?</h3>
+                    <p> Enter your e-mail address below to reset your password. </p>
+                    <div class="form-group">
+                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
+                               placeholder="Email" name="email"/></div>
+                    <div class="form-actions">
+                        <button type="button" id="back-btn" class="btn grey btn-default" ng-click="forgotBackClicked()">
+                            Back
+                        </button>
+                        <button type="submit" class="btn blue btn-success uppercase pull-right"
+                                ng-click="forgotSubmitClicked()">Submit
+                        </button>
+                    </div>
+                </form>
+                <!-- END FORGOT PASSWORD FORM -->
+            </div>
+            <div class="login-footer">
+                <div class="row bs-reset">
+                    <div class="col-xs-5 bs-reset">
+                        <ul class="login-social">
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-linked-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-7 bs-reset">
+
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title">Other Terms and Conditions</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><pre>
+1.    Allegro currently allows trading only on Cash and Carry basis and does not provide margin trading facility for purchases.
+
+2.    Clients are allowed to sell only if securities are available in the client’s designated DEMAT account.
+
+3.    The information provided in the reporting platform is compiled with data received from various registrar and transfer agents,
+      and the prices are updated from other market sources.  Allegro takes requisite care to ensure authenticity of data,
+      but since there is dependence on other parties, Allegro cannot be held responsible for inaccuracies.  The inaccuracies,
+      if any, must be brought to our attention on the mail IDs mentioned above.
+
+4.    Prevent unauthorized transactions in your account. Update your mobile numbers/email IDs with your stock brokers.
+      Receive information of your transactions directly from Exchange on your mobile/email at the end of the day.
+
+5.    KYC is the one-time exercise while dealing in securities markets. Once KYC is done through a SEBI registered intermediary
+      (Broker, DP, Mutual Fund, etc.), you need not undergo the same process again when you approach another intermediary.
+
+6.    No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form
+      to authorize your bank to make payment in case of allotment. No worries for refund as the money remains in investor's account.
+
+                            © Copyright Allegro Capital Advisors Pvt. Ltd. All rights reserved
+                </pre>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 text-center" style="margin-top: 145px;">
+            <div class="row" style="padding-top: 15px;">
+                <div class="col-md-3 col-xs-6"><img src="../assets/global/img/logos/tata logo.png" alt=""
+                                                    style="width: 130px;height: 65px;"></div>
+                <div class="col-md-3 col-xs-6" style="margin-bottom: 15px;"><img
+                        src="../assets/global/img/logos/Axis mf logo.jpg" alt="" style="width: 130px;height: 65px;">
+                </div>
+                <div class="col-md-3 col-xs-6"><img src="../assets/global/img/logos/birla sunlife mf.jpg" alt=""
+                                                    style="width: 130px;height: 65px;"></div>
+                <div class="col-md-3 col-xs-6"><img src="../assets/global/img/logos/dsp black rock.jpg" alt=""
+                                                    style="width: 130px;height: 65px;"></div>
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <div class="col-md-3 col-xs-6" style="margin-bottom: 15px;"><img
+                        src="../assets/global/img/logos/franklintempleton logo.png" alt=""
+                        style="width: 130px;height: 65px;"></div>
+                <div class="col-md-3 col-xs-6" style="margin-bottom: 15px;"><img
+                        src="../assets/global/img/logos/hdfc logo.png" alt="" style="width: 130px;height: 65px;"></div>
+                <div class="col-md-3 col-xs-6"><img src="../assets/global/img/logos/icici logo.png" alt=""
+                                                    style="width: 130px;height: 65px;"></div>
+                <div class="col-md-3 col-xs-6"><img src="../assets/global/img/logos/idfc mf logo.png" alt=""
+                                                    style="width: 130px;height: 65px;"></div>
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <div class="col-md-3 col-xs-6" style="margin-bottom: 15px;"><img
+                        src="../assets/global/img/logos/jp morgan asset management logo.jpg" alt=""
+                        style="width: 130px;height: 65px;"></div>
+                <div class="col-md-3 col-xs-6" style="margin-bottom: 15px;"><img
+                        src="../assets/global/img/logos/kotak mf logo.jpg" alt="" style="width: 130px;height: 65px;">
+                </div>
+                <div class="col-md-3 col-xs-6"><img src="../assets/global/img/logos/motilal oswal.jpg" alt=""
+                                                    style="width: 130px;height: 65px;"></div>
+                <div class="col-md-3 col-xs-6"><img src="../assets/global/img/logos/reliance mf logo.png" alt=""
+                                                    style="width: 130px;height: 65px;"></div>
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <div class="col-md-3 col-xs-6" style="margin-bottom: 15px;"><img
+                        src="../assets/global/img/logos/sbi mutual fund.png" alt="" style="width: 130px;height: 65px;">
+                </div>
+                <div class="col-md-3 col-xs-6" style="margin-bottom: 15px;"><img
+                        src="../assets/global/img/logos/sundaram mf logo.png" alt="" style="width: 130px;height: 65px;">
+                </div>
+                <div class="col-md-3 col-xs-6"><img src="../assets/global/img/logos/uti mf logo.png" alt=""
+                                                    style="width: 130px;height: 65px;"></div>
+                <div class="col-md-3 col-xs-6" style="margin-bottom: 15px;"><img src="../assets/global/img/logo1.jpg"
+                                                                                 alt=""
+                                                                                 style="width: 130px;height: 65px;">
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="col-md-12 login-copyright text-right" style="text-align: center;width: 100%;">
+            For questions, feedback or issues, please mail to : feedback@allegroadvisors.com. For grievances, please mail to : igallegro@allegroadvisors.com
+            <br/>
+            Member: NSE (Cash): SEBI Regn. No: INB231299737 | NSE Trading Member ID: 12997 | CDSL SEBI Regn. No.: IN-DP-CDSL-506-2009 | DP ID: 12060300 | SEBI PMS Regn. No.: INP000002437.
+            <br/>
+            <a data-toggle="modal" data-target="#myModal" style="color:#98a6ba;">Other Terms and Conditions</a>
+            <br/>
+            <span style="float:left;">&copy; Copyright Allegro Capital Advisors Pvt. Ltd. All rights reserved.</span>
+            <span style="float:right;">Developed and powered by Ampsys Consulting Pvt. Ltd.</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<!-- BEGIN CONTENT BODY -->
+<div class="page-content">
+    <!-- BEGIN PAGE HEADER-->
+
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                Home
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+               Dashboard
+            </li>
+        </ul>
+        <div style="display: none;" class="page-toolbar">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn green btn-md dropdown-toggle" data-toggle="dropdown"> TRANSACT ONLINE
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li>
+                        <a href ><i class="icon-share-alt"></i> Book Mutual Fund</a>
+                    </li>
+                    <li>
+                        <a href > <i class="icon-basket-loaded"></i> Buy Mutual Fund</a>
+                    </li>
+                    <li>
+                        <a href > <i class="icon-mouse"></i> Research Funds</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href > <i class="icon-call-out"></i> Call your manager</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <h4 style="display: none;" class="page-title">  <span>{{CustomerName}}</span>
+    </h4>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-layers"></i>Equity Performance Chart</div>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse"> </a>
+                        <a href="javascript:;" class="reload"> </a>
+                    </div>
+                </div>
+                <div class="col-md-6 formlabels">
+                    <label for="form_control_1">DATE RANGE</label><br/>
+                    <div id="reportrange" class="btn default">
+                        <i class="fa fa-calendar"></i> &nbsp;
+                        <span> </span>
+                        <b class="fa fa-angle-down"></b>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group form-md-line-input has-info">
+                        <select class="form-control" id="form_control_1">
+                            <option value=""></option>
+                            <option value="1">CNX NIFTY</option>
+                            <option value="2">BSE SENSEX</option>
+                            <option value="3">BSE MID CAP</option>
+                            <option value="4">BSE BANKEX</option>
+                        </select>
+                        <label for="form_control_1">INDEX</label>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div id="line_top_x"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- END CONTENT BODY -->

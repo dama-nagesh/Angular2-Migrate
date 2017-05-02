@@ -1,0 +1,124 @@
+<!-- BEGIN CONTENT BODY -->
+<div class="page-content">
+    <!-- BEGIN PAGE HEADER-->
+
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                Mutual Fund
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                Transactions
+            </li>
+        </ul>
+        <div class="btn-group pull-right" style="margin-top: 3px;">
+            <input type="button" class="btn green btn-md excelbtn" filename="{{ filename }}.csv" value="Export Excel"
+                   ng-csv="ExcelData" csv-header="['InvName','Folio','TradeDate','TransType','Units','Rate','Amount']"/>
+        </div>
+        <div style="display: none;" class="page-toolbar">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn green btn-md dropdown-toggle" data-toggle="dropdown"> TRANSACT ONLINE
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li>
+                        <a href><i class="icon-share-alt"></i> Book Mutual Fund</a>
+                    </li>
+                    <li>
+                        <a href> <i class="icon-basket-loaded"></i> Buy Mutual Fund</a>
+                    </li>
+                    <li>
+                        <a href> <i class="icon-mouse"></i> Research Funds</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href> <i class="icon-call-out"></i> Call your manager</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <div style="display: none;" class="pull-left">
+        <h4 class="page-title"><span>{{CustomerName}}</span>
+        </h4>
+    </div>
+    <div style="display: none;" class="btn-group pull-right" style="margin-top: 25px;">
+        <input type="button" class="btn green btn-md excelbtn" filename="{{ filename }}.csv" value="Export Excel"
+               ng-csv="ExcelData" csv-header="['InvName','Folio','TradeDate','TransType','Units','Rate','Amount']"/>
+    </div>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-layers"></i>Transactions</div>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse" id="mfViewTrans" ng-click="toggleDiv()"> </a>
+                        <a href="javascript:;" class="reload" ng-click="reload()"> </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                    <div class="form-group form-md-line-input has-info" > 
+                        <select class="form-control" id="Select1" ng-model="dataMonthSelected" ng-change="ChangeOption()">
+                            <option value="1">Yesterday</option>
+                            <option value="2">This Week</option>
+                            <option value="3">This Month</option>
+                            <option value="4">This FY</option>
+                            <option value="5">Last FY</option>
+                            <option value="6">Since Inception</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-md-line-input has-info">
+                            <select class="form-control" id="form_control_1" style="width: 450px;display:inline"
+                                             ng-options="item as item.SchemeName for item in SchemeItems track by item.SchemeCode"
+                                             ng-model="dataItemSelected" ng-change="ChangeOption()"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" id="mfvtdiv1">
+                    <div class="table-scrollable">
+                        <table id="tableMFViewTransaction"
+                               class="table table-striped table-bordered table-advance table-hover">
+                            <thead>
+                            <tr>
+                                <th class="text-center backsort sort" ng-click="orderByField('InvName')"> Investment </th>
+                                <th class="text-center backsort sort" ng-click="orderByField('Folio')"> Acct/Folio </th>
+                                <th class="text-center backsort sort" ng-click="orderByFieldDate('TradeDate')"> Trade Date </th>
+                                <th class="text-center backsort sort" ng-click="orderByField('TransType')"> Trans Type </th>
+                                <th class="text-center backsort sort" ng-click="orderByField('Units')"> Units/Qty </th>
+                                <th class="text-center backsort sort" ng-click="orderByField('Rate')"> Rate </th>
+                                <th class="text-center backsort sort" ng-click="orderByField('Amount')"> Amount </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="item in items">
+                                <td class="text-left">{{item.InvName}}</td>
+                                <td class="text-center"> {{item.Folio}}</td>
+                                <td class="text-center"> {{item.TradeDate}}</td>
+                                <td class="text-center"> {{item.TransType}}</td>
+                                <td class="text-right"> {{item.Units | number}}</td>
+                                <td class="text-right"> {{item.Rate | number}}</td>
+                                <td class="text-right"> {{item.Amount | number}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="text-align: center">
+                        <ul uib-pagination total-items="CountRecords" ng-model="currentPage" max-size="maxSize"
+                            class="pagination-sm" boundary-links="true" num-pages="numPages">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CONTENT BODY -->

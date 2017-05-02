@@ -1,0 +1,79 @@
+/* AMPSYS Custom Style */
+
+.user-login-5 .login-container>.login-content {
+    margin-top: 25%;
+}
+
+.user-login-5 .login-container>.login-content>.login-form .rem-password {
+    margin-top: -5px; margin-bottom: 5px; 
+}
+
+.user-login-5 .login-container>.login-content>.login-form .forgot-password>a {
+    color: #337ab7;
+}
+
+.page-sidebar .page-sidebar-menu>li.heading>h3 { color: #ffffff; }
+
+.page-sidebar .page-sidebar-menu>li>a>i[class*=icon-], .page-sidebar .page-sidebar-menu>li>a>i[class^=icon-], .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a>i[class*=icon-], .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a>i[class^=icon-] {
+    color: #fff;
+}
+
+.portlet.light.portlet-fit>.portlet-body {
+     padding: 0px; 
+}
+
+.datatable thead tr th { font-size: 12px; text-align: center; vertical-align: middle; }
+
+.datatable td { font-size: 12px; vertical-align: middle !important; }
+
+th { font-weight: 600 !important; }
+
+.form-group.form-md-line-input {
+    position: relative;
+    margin: 0 0 10px;
+    padding-top: 24px;
+}
+
+.tbivfont { font-weight: 600; }
+
+.tbcvfont { font-weight: 800; }
+
+.formlabels { color: #327ad5; }
+
+#line_top_x { padding-top: 10px; }
+
+.login-left { border-right: 1px dotted #999999; }
+
+/* BEGIN RESPONSIVE */
+
+
+/* END RESPONSIVE */
+.login{
+    background-color: white !important;
+}
+
+/********pagination css ***************/
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}

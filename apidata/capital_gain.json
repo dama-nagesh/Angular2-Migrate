@@ -1,0 +1,23 @@
+[
+  {
+    "Investment":"Axis Bank Ltd",
+    "Folio":null,
+    "EligibleSTCG":6500,
+    "EligibleLTCG":2200,
+    "Total":8700,
+    "Details":{
+      "Investment":"Axis Bank Ltd",
+      "Folio":null,
+      "Units":200,
+      "BuyDate":"1 Jan 15",
+      "BuyRate":449,
+      "BuyAmount":89800,
+      "SellDate":"30 Jan 16",
+      "SellRate":460,
+      "SellAmount":92000,
+      "Days":394,
+      "EligibleSTCG":0,
+      "EligibleLTCG":2200
+    }
+  }
+]

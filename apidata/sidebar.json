@@ -1,0 +1,118 @@
+[
+  {
+    "Name": "DASHBOARD",
+    "Type": "Link",
+    "MainLink": "/home",
+    "Info": {
+      "Properties": [
+        "icon-speedometer",
+        "selected",
+        "start active"
+      ],
+      "Link_Name": [],
+      "Link_URL": [
+      ]
+    }
+  },
+  {
+    "Name": "MY PLANS",
+    "Info": {
+      "Properties": [
+        "icon-book-open",
+        "arrow"
+      ],
+      "Link_Name": [
+        "Dashboard"
+      ],
+      "Link_URL": [
+        "/my_plans"
+      ]
+    }
+  },
+  {
+    "Name": "MUTUAL FUND",
+    "Info": {
+      "Properties": [
+        "icon-wallet",
+        "arrow"
+      ],
+      "Link_Name": [
+        "Dashboard",
+        "Net Position",
+        "Capital Gain",
+        "View Transaction",
+        "View Ledger",
+        "Analytics"
+      ],
+      "Link_URL": [
+        "/mutual_fund/dashboard",
+        "/mutual_fund/net_position",
+        "/mutual_fund/capital_gain",
+        "/mutual_fund/view_transaction",
+        "/coming_soon",
+        "/coming_soon"
+      ]
+    }
+  },
+  {
+    "Name": "EQUITY",
+    "Info": {
+      "Properties": [
+        "icon-graph",
+        "arrow"
+      ],
+      "Link_Name": [
+        "Dashboard",
+        "Net Position",
+        "Capital Gain",
+        "View Transaction",
+        "View Ledger",
+        "Analytics"
+      ],
+      "Link_URL": [
+        "/equity/dashboard",
+        "/equity/net_position",
+        "/equity/capital_gain",
+        "/equity/view_transaction",
+        "/coming_soon",
+        "/coming_soon"
+      ]
+    }
+  },
+  {
+    "Name": "Managed Account",
+    "Info": {
+      "Properties": [
+        "icon-bar-chart",
+        "arrow"
+      ],
+      "Link_Name": [
+        "Investment Summary",
+        "Corporate Action",
+        "Holding Statement",
+        "Transaction Summary"
+      ],
+      "Link_URL": [
+        "/pms/dashboard",
+        "/pms/net_position",
+        "/pms/holding_statement",
+        "/pms/view_transaction"
+      ]
+    }
+    },
+{
+    "Name": "Demat",
+    "Info": {
+      "Properties": [
+        "icon-notebook",
+        "arrow"
+      ],
+      "Link_Name": [
+        "Dashboard"
+      ],
+      "Link_URL": [
+        "/Demat/Dashboard"
+      ]
+    }
+  }
+]

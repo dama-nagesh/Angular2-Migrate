@@ -1,0 +1,35 @@
+{
+  "LDashboardAssets": [
+    {
+      "Assets": "Mutual Fund",
+      "InvestedValue": 120,
+      "CurrentValue": 300,
+      "Xirr": 0
+    },
+    {
+      "Assets": "Equity",
+      "InvestedValue": 120,
+      "CurrentValue": 300,
+      "Xirr": 0
+    }
+  ],
+  "LDashboardEarnings": [
+    {
+      "Dividend": 200,
+      "RealizedPL": 2000,
+      "Total": 2200
+    }
+  ],
+  "LDashboardPerformance": [
+    {
+      "Assets": "Mutual Fund",
+      "Total": "1000",
+      "ABS": "7.25"
+    },
+    {
+      "Assets": "Equity",
+      "Total": "5000",
+      "ABS": "8.25"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "account": {
+    "login_api_url_dev": "https://api.wealtherp.net/Authorization/Login",
+    "sso_login": "https://api.wealtherp.net/Authorization/SingleSignOnLogin",
+    "register_api_url_dev": "https://api.wealtherp.net/api/register",
+    "myprofile_url_dev": "https://api.wealtherp.net/Account/GetUserProfile",
+    "changePswd_url_dev": "https://api.wealtherp.net/Account/ChangePassword",
+    "familyMember_url_dev":"https://api.wealtherp.net/Account/GetUserFamily"
+  },
+  "Dashboard": {
+    "Main": "https://api.wealtherp.net/DashBoard/GetCustomerDashBoard"
+  },
+  "MyPlan": {
+    "Dashboard": "https://api.wealtherp.net/DashBoard/MyPlanDashBoard"
+  },
+  "Mutualfund": {
+    "Dashboard": "https://api.wealtherp.net/DashBoard/CustomerAssetAllocation",
+    "NetPosition": "https://api.wealtherp.net/DashBoard/CustomerNetPosistion",
+    "CapitalGain": "https://api.wealtherp.net/DashBoard/CapitalGainSummary",
+    "MFTransaction": "https://api.wealtherp.net/DashBoard/GetCustomerTransaction",
+    "GetSchemeNameList": "https://api.wealtherp.net/DashBoard/GetCustomerSchemeDetails"
+  },
+  "PMS": {
+    "CustomerPMSFolioList": "https://api.wealtherp.net/PMS/CustomerPMSFolioList",
+    "CustomerPMSHolding": "https://api.wealtherp.net/PMS/CustomerPMSHolding",
+    "CustomerPMSTransaction": "https://api.wealtherp.net/PMS/CustomerPMSTransactions",
+    "CustomerPMSNetPosition": "https://api.wealtherp.net//PMS/CustomerPMSSplitDivdTrans",
+    "CustomerPMSDashboard": "https://api.wealtherp.net//PMS/CustomerPMSSummary",
+    "CustomerDematSummary": "https://api.wealtherp.net//PMS/CustomerDematSummary"
+  },
+  "LOGO": {
+    "LogoImgUrl": "https://app.wealtherp.net/Images/"
+  }
+}

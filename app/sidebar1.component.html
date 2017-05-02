@@ -1,0 +1,39 @@
+<section class="sidebar">
+      <div class="user-panel">
+        <div class="pull-left image">
+          <!--<img class="login-logo login-6 applogo" src="{{pageUrls['LOGO'].LogoImgUrl}}" />-->
+          <img src="https://app.wealtherp.net/Images/" alt="">
+        </div>
+        <!--<div class="pull-left info">
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>-->
+      </div>
+      <!-- search form -->
+      <!--<form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>-->
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" *ngFor="let item of sidebarData">
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>{{item.Name}}</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <!--<div *ngFor="let itemLink of item.Info.Link_URL">-->
+          <ul class="treeview-menu" *ngFor="let itemName of item.Info.Link_Name; let i = index" [attr.data-index]="i">
+            <li class="active"><a href={{item.Info.Link_URL[i]}}><i class="fa fa-circle-o"></i> {{itemName}}</a></li>
+          </ul>
+          <!--</div>-->
+        </li>
+      </ul>
+      </section>

@@ -1,0 +1,146 @@
+<!-- BEGIN CONTENT BODY -->
+<div class="page-content">
+    <!-- BEGIN PAGE HEADER-->
+
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                Equity
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                Net Position
+            </li>
+        </ul>
+        <div class="btn-group pull-right" style="margin-top: 3px;">
+            <input type="button" class="btn green btn-md excelbtn" filename="{{ filename }}.csv" value="Export Excel" ng-csv="ExcelData" csv-header="['Investment','Trade Acc','Holding Start Date','Holding Units','Avg Prc','NAV','Invested Cost','Current Value','DVR','DVP','P/L','P/L %','XIRR%']" />
+        </div>
+        <div style="display: none;" class="page-toolbar">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn green btn-md dropdown-toggle" data-toggle="dropdown"> TRANSACT ONLINE
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li>
+                        <a href><i class="icon-share-alt"></i> Book Mutual Fund</a>
+                    </li>
+                    <li>
+                        <a href> <i class="icon-basket-loaded"></i> Buy Mutual Fund</a>
+                    </li>
+                    <li>
+                        <a href> <i class="icon-mouse"></i> Research Funds</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href> <i class="icon-call-out"></i> Call your manager</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <div style="display: none;" class="pull-left">
+        <h4 class="page-title"><span>{{CustomerName}}</span>
+        </h4>
+    </div>
+    <!--<div style="display: none;" class="btn-group pull-right" style="margin-top: 25px;">-->
+        <!--<input type="button" class="btn green btn-md excelbtn" filename="{{ filename }}.csv" value="Export Excel" ng-csv="ExcelData" csv-header="['Scheme','FolioNum','SchemeStartDate','HoldingStartDate','PurchaseUnits','SoldUnits','BalanceUnits','AvgPrice','InvestedValue','Redemption','NAV','CurrentValue','RealizedPL','UnRealizedPL','TotalPL','Div','TotalPLWithDiv','ABS','XIRR']" />-->
+    <!--</div>-->
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-graph"></i>Net Position</div>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse" id="eqnp" ng-click="toggleDiv()"> </a>
+                        <a href="javascript:;" class="reload" ng-click="reload()"> </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group form-md-line-input has-info">
+                            Type:
+                            <select class="form-control" id="form_control_1" style="width: 450px;display:inline"
+                                    ng-model="dataItemSelected" ng-change="ChangeOption()">
+                                <option value="0">Holdings</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabbable-line" id="eqnpdiv1">
+                    <div class="table-responsive" id="netPositionTable">
+                        <table id="tableNetPos" class="table table-striped table-bordered table-condensed datatable"
+                               data-toggle="table" data-height="80" style="width:1800px" data-sort-name="name"
+                               data-sort-order="desc">
+                            <thead>
+                            <tr>
+                                <th data-field="001" style="min-width: 250px" class="backsort sort" ng-click="orderByField('Scheme')">
+                                    Investment
+                                </th>
+                                <th data-field="002" class="backsort sort" ng-click="orderByField('FolioNum')">
+                                    Trade Acc
+                                </th>
+                                <th data-field="003" class="backsort sort" ng-click="orderByField('SchemeStartDate')">
+                                    Holding <br /> Start Date 
+                                </th>
+                                
+                                <th data-field="007" class="backsort sort" ng-click="orderByField('BalanceUnits')">
+                                    Holding <br /> Units
+                                </th>
+                                <th data-field="018" class="backsort sort" ng-click="orderByField('AvgPrice')">
+                                   Avg Prc
+                                </th>
+                                <th data-field="018" class="backsort sort" ng-click="orderByField('NAV')">
+                                    Mkt Prc
+                                </th>
+                                <th data-field="008" class="backsort sort" ng-click="orderByField('InvestedValue')">
+                                    Invested Cost
+                                </th>
+                                <th data-field="011" class="backsort sort" ng-click="orderByField('CurrentValue')">
+                                    Current Value
+                                </th>
+                                <th data-field="018" class="backsort sort" ng-click="orderByField('DVP')">Dividend</th>
+                                
+                                <th data-field="017" class="backsort sort" ng-click="orderByField('UnRealizedPL')">
+                                    P/L
+                                </th>
+                                <th data-field="017" class="backsort sort" ng-click="orderByField('ABS')">P/L %</th>
+                                <th data-field="018" class="backsort sort" ng-click="orderByField('XIRR')">XIRR%</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="eqItem in eqItems">
+                                <td class="text-left">{{eqItem.Scheme}}</td>
+                                <td class="text-center">{{eqItem.FolioNum}}</td>
+                                <td class="text-center">{{eqItem.SchemeStartDate}}</td>
+                                <td class="text-right">{{eqItem.BalanceUnits | number}}</td>
+                                <td class="text-right">{{eqItem.AvgPrice }}</td>
+                                <td class="text-right">{{eqItem.NAV }}</td>
+                                <td class="text-right">{{eqItem.InvestedValue | number}}</td>
+                                <td class="text-right">{{eqItem.CurrentValue | number}}</td>
+                                 <td class="text-right">{{eqItem.DVP}}</td>
+                               
+                                <td class="text-right">{{eqItem.UnRealizedPL | number}}</td>
+                                <td class="text-right">{{eqItem.ABS}}</td>
+                                <td class="text-right">{{eqItem.XIRR}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="text-align: center">
+                        <ul uib-pagination total-items="CountRecords" ng-model="currentPage" max-size="maxSize"
+                            class="pagination-sm" boundary-links="true" num-pages="numPages" items-per-page="numPerPage">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CONTENT BODY -->

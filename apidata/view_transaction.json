@@ -1,0 +1,20 @@
+[
+  {
+    "Investment":"Axis Bank Ltd",
+    "AcctFolio":null,
+    "TradeDate":"1 Jan 15",
+    "TransType":"Buy",
+    "UnitsQty":200,
+    "Rate":449,
+    "Amount":0
+  },
+  {
+    "Investment":"Axis Bank Ltd",
+    "AcctFolio":null,
+    "TradeDate":"15 Mar 15",
+    "TransType":"Buy",
+    "UnitsQty":400,
+    "Rate":440,
+    "Amount":0
+  }
+]
